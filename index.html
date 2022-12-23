@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Number</h1>
+        <table width=100%>
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text"placeholder="Your Name" id="name"></td>
+        </tr>
+        <tr>
+            <td><label for="Email">Email:</label></td>
+           <td><input type="text"placeholder="Enter email number"id="Email"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password:</label></td>
+            <td><input type="text"placeholder="enter password"id="password"></td>
+        </tr>
+        <tr>
+            <td><label for="phone no">phone num:</label></td>
+            <td><input type="text"placeholder="Enter phone Number"id="phonenum"></td>
+        </tr>
+        <tr>
+            <td><label for="gender">gender</label></td>
+            <td>Male:<input type="radio" name="gender" id="male"></td>
+            <td>Female:<input type="radio"name="gender"id="female"></td>
+        </tr>
+        <tr>
+            <td><label for="langauge">Langauge</label></td>
+            <td>
+                <select id="langauges">
+                    <option id=" "></option>
+                    <option id="op2">English</option>
+                    <option id="op3">Telugu</option>
+                    <option id="op4">Hindi</option>
+                    <option id="op5">Tamil</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="address">address</label></td>
+            <td><input type="text"palceholder="enter adress"id="address"></td>
+        </tr>
+        <td><input type="button"onclick="fun()"value="submit"></td>
+    </table>
+    </div>
+
+<script>
+    function fun()
+    {
+        let n=document.getElementById("name").value
+        name_len=n.length
+        if(name_len<6||name_len>30)
+        {
+            alert("Invalid name")
+        }
+        let x=document.getElementById("password").value
+        length_password=x.length
+        if(length_password<5||length_password>11)
+        {
+            alert("Inavalid Password")
+        }
+        let phone_no=document.getElementById("phonenum").value
+        let p=phone_no.toString()
+        phone_len=p.length
+        if(phone_len<10||phone_len>10)
+        {
+          alert("Invalid phone num")
+        }
+        let male=document.getElementById("male").checked 
+        let female=document.getElementById("female").checked.
+        if(male==false && female==false)
+        {
+            alert("Seelct Gender")
+        }
+        var fruits=document.getElementById("langauges");
+        if(fruits.value=="")
+        {
+            alert("select any option")
+        }  
+        
+    };
+</script>
+</body>
+</html>
